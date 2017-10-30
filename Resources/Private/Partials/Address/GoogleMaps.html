@@ -16,7 +16,7 @@
 			currentAddress['uid'] = '<typomotor:CleanJsString>{address.uid}</typomotor:CleanJsString>';
 			currentAddress['address'] = '<typomotor:CleanJsString>{address.country.shortNameEn}, {address.zip} {address.city}, {address.address}</typomotor:CleanJsString>';
 			currentAddress['title'] = '<typomotor:CleanJsString>{address.company}</typomotor:CleanJsString>';
-			currentAddress['markerText'] = '<typomotor:CleanJsString><h3>{address.company}</h3><p>{address.address}<br>{address.zip} {address.city}<br>{address.country.shortNameEn}</p></typomotor:CleanJsString>';
+			currentAddress['markerText'] = '<f:format.html><typomotor:CleanJsString><h3>{address.company}</h3><p>{address.address}<br>{address.zip} {address.city}<br>{address.country.shortNameEn}</p></typomotor:CleanJsString></f:format.html>';
 			currentAddress['lng'] = {address.longitude};
 			currentAddress['lat'] = {address.latitude};
 			addresses.push(currentAddress);
