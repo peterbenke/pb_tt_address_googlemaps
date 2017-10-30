@@ -1,0 +1,121 @@
+{namespace typomotor=PeterBenke\PbTtAddressGooglemaps\ViewHelpers}
+<f:for each="{addresses}" as="address">
+
+	<div class="address-item">
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Images -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+		<f:for each="{address.image}" as="img">
+			<div class="image">
+				<f:image src="{img.uid}" width="{settings.address.viewOptions.image.width}" alt="" treatIdAsReference="1" />
+			</div>
+		</f:for>
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Description -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+		<f:if condition="{address.description}">
+			<p class="dexcription">
+				<f:format.html>{address.description}</f:format.html>
+			</p>
+		</f:if>
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Name -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+		<f:if condition="{address.lastName}">
+			<f:format.html parseFuncTSPath="">
+				<typomotor:wrap wrap="{settings.address.viewOptions.wrapHeadlines}">
+					{f:translate(key:'tx_pbttaddressgooglemaps.view.label.name')}
+				</typomotor:wrap>
+			</f:format.html>
+			<p class="name">
+					<f:if condition="{address.gender}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.gender_{address.gender}')}</f:if>
+					<f:if condition="{address.title}">{address.title}</f:if>
+					<f:if condition="{address.firstName}">{address.firstName}</f:if>
+					<f:if condition="{address.middleName}">{address.middleName}</f:if>
+					{address.lastName}
+			</p>
+		</f:if>
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Address -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+			<f:format.html parseFuncTSPath="">
+				<typomotor:wrap wrap="{settings.address.viewOptions.wrapHeadlines}">
+					{f:translate(key:'tx_pbttaddressgooglemaps.view.label.address')}
+				</typomotor:wrap>
+			</f:format.html>
+			<p class="address">
+				{address.address}<br>
+				<f:if condition="{address.building}">{address.building}<br></f:if>
+				<f:if condition="{address.room}">{address.room}<br></f:if>
+				{address.zip} {address.city}<br>
+				<f:if condition="{address.region}">{address.region}<br></f:if>
+				<f:if condition="{address.country}">{address.country}</f:if>
+			</p>
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Contact -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+		<typomotor:ifContactDataIsNotEmpty address="{address}">
+			<f:format.html parseFuncTSPath="">
+				<typomotor:wrap wrap="{settings.address.viewOptions.wrapHeadlines}">
+					{f:translate(key:'tx_pbttaddressgooglemaps.view.label.contactdata')}
+				</typomotor:wrap>
+			</f:format.html>
+			<p class="contact">
+				<f:if condition="{address.phone}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.phone')}: {address.phone}<br></f:if>
+				<f:if condition="{address.fax}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.fax')}: {address.fax}<br></f:if>
+				<f:if condition="{address.mobile}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.mobile')}: {address.mobile}<br></f:if>
+				<f:if condition="{address.email}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.email')}: <f:link.email email="{address.email}" /><br></f:if>
+				<f:if condition="{address.www}">{f:translate(key:'tx_pbttaddressgooglemaps.view.label.www')}: <f:link.external uri="{address.www}" target="_blank">{address.www}</f:link.external><br></f:if>
+			</p>
+		</typomotor:ifContactDataIsNotEmpty>
+
+
+		<f:comment>
+			<!-- ======================================================================================================================= -->
+			<!-- Company -->
+			<!-- ======================================================================================================================= -->
+		</f:comment>
+
+		<f:if condition="{address.company}">
+			<f:format.html parseFuncTSPath="">
+				<typomotor:wrap wrap="{settings.address.viewOptions.wrapHeadlines}">
+					{f:translate(key:'tx_pbttaddressgooglemaps.view.label.company')}
+				</typomotor:wrap>
+			</f:format.html>
+			<p class="company">
+				{address.company}
+				<f:if condition="{address.position}">
+					<br>{f:translate(key:'tx_pbttaddressgooglemaps.view.label.position')}: {address.position}
+				</f:if>
+			</p>
+		</f:if>
+
+		<!-- Microdata -->
+		<f:if condition="{settings.microDataSchemaType}">
+			<f:render partial="Address/MicroData" arguments="{address:address, host:host, settings:settings}" />
+		</f:if>
+
+	</div>
+
+</f:for>
+

@@ -1,0 +1,75 @@
+<f:comment>
+	<!--
+
+	See:
+	http://schema.org/LocalBusiness
+	http://schema.org/Person
+	http://schema.org/PostalAddress
+	http://schema.org/GeoCoordinates
+
+	Testing tool for microdata:
+	https://search.google.com/structured-data/testing-tool/
+
+	-->
+</f:comment>
+
+<script type="application/ld+json">
+
+{
+	"@context": "http://schema.org/",
+	"@type": "{settings.microDataSchemaType}",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "<f:format.html parseFuncTSPath="">{address.address}</f:format.html>",
+		"postalCode": "<f:format.html parseFuncTSPath="">{address.zip}</f:format.html>",
+		"addressLocality": "<f:format.html parseFuncTSPath="">{address.city}</f:format.html>",
+		<f:if condition="{address.region}">
+			"addressRegion": "<f:format.html parseFuncTSPath="">{address.region}</f:format.html>",
+		</f:if>
+		<f:if condition="{address.country}">
+			"addressCountry": "<f:format.html parseFuncTSPath="">{address.country}</f:format.html>"
+		</f:if>
+	},
+	<f:for each="{address.image}" as="img">
+		"image": "<f:format.html parseFuncTSPath="">{host}{f:uri.image(src:img.uid,treatIdAsReference:1)}</f:format.html>",
+	</f:for>
+	<f:if condition="{address.description}">
+		"description": "<f:format.html parseFuncTSPath="">{address.description}</f:format.html>",
+	</f:if>
+	<f:if condition="{address.phone}">
+		"telephone": "<f:format.html parseFuncTSPath="">{address.phone}</f:format.html>",
+	</f:if>
+	<f:if condition="{address.mobile}">
+		"telephone": "<f:format.html parseFuncTSPath="">{address.mobile}</f:format.html>",
+	</f:if>
+	<f:if condition="{address.fax}">
+		"faxNumber": "<f:format.html parseFuncTSPath="">{address.fax}</f:format.html>",
+	</f:if>
+	<f:if condition="{address.email}">
+		"email": "<f:format.html parseFuncTSPath="">{address.email}</f:format.html>",
+	</f:if>
+	<f:if condition="{address.www}">
+		"url": "<f:format.html parseFuncTSPath="">{address.www}</f:format.html>",
+	</f:if>
+
+	<f:if condition="{settings.microDataSchemaType} == 'LocalBusiness'">
+		<f:if condition="{address.company}">
+			"name": "<f:format.html parseFuncTSPath="">{address.company}</f:format.html>",
+		</f:if>
+		<f:if condition="{0: address.longitude, 1: address.latitude}">
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "<f:format.html parseFuncTSPath="">{address.latitude}</f:format.html>",
+				"longitude": "<f:format.html parseFuncTSPath="">{address.longitude}</f:format.html>"
+			}
+		</f:if>
+	</f:if>
+
+	<f:if condition="{settings.microDataSchemaType} == 'Person'">
+		"name": "<f:format.html parseFuncTSPath="">{address.firstName} {address.middleName} {address.lastName}</f:format.html>"
+	</f:if>
+
+
+}
+
+</script>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-20T11:48:25Z" product-name="addresslist">
+		<header/>
+		<body>
+
+			<trans-unit id="addresslist.pluginName" xml:space="preserve">
+				<source>Address list (google maps)</source>
+			</trans-unit>
+			<trans-unit id="addresslist.pluginDescription" xml:space="preserve">
+				<source>Extends the extension tt_address with frontend view in Google maps.</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.sheetTitle" xml:space="preserve">
+				<source>Address list</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.layout.label" xml:space="preserve">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.layout.oneColWithImage" xml:space="preserve">
+				<source>One column with image</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.layout.twoCols" xml:space="preserve">
+				<source>Two columns</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.microData.label" xml:space="preserve">
+				<source>Output microdata</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.default" xml:space="preserve">
+				<source>No output</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.person" xml:space="preserve">
+				<source>Output micro data for "Person"</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.localBusiness" xml:space="preserve">
+				<source>Output micro data for "LocalBusiness"</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.order.label" xml:space="preserve">
+				<source>Order by</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.order.name" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.order.country" xml:space="preserve">
+				<source>Country, name</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexforms.addresslist.displayGoogleMap.label" xml:space="preserve">
+				<source>Display Google maps?</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.categories.label" xml:space="preserve">
+				<source>Categories</source>
+			</trans-unit>
+
+
+			<trans-unit id="geocoding.error" xml:space="preserve">
+				<source>Error</source>
+			</trans-unit>
+			<trans-unit id="geocoding.error.referenceToParentWindow" xml:space="preserve">
+				<source>Reference to parent window not found!</source>
+			</trans-unit>
+			<trans-unit id="geocoding.error.geocodingNotSuccessful.part1" xml:space="preserve">
+				<source>Google Geocoding was not successful for the following reason:</source>
+			</trans-unit>
+			<trans-unit id="geocoding.error.geocodingNotSuccessful.part2" xml:space="preserve">
+				<source>(Maybe the address data is not complete? => address, city and country!)</source>
+			</trans-unit>
+
+
+			<trans-unit id="geocoding.page.title" xml:space="preserve">
+				<source>Google Geocoding</source>
+			</trans-unit>
+			<trans-unit id="geocoding.page.headline" xml:space="preserve">
+				<source>Google Geocoding</source>
+			</trans-unit>
+
+			<trans-unit id="geocoding.form.transferGeoData.label.latitude" xml:space="preserve">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.longitude" xml:space="preserve">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.submit" xml:space="preserve">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.cancel" xml:space="preserve">
+				<source>Cancel</source>
+			</trans-unit>
+			<trans-unit id="geocoding.form.geosearch.label.searchFor" xml:space="preserve">
+				<source>Search for</source>
+			</trans-unit>
+			<trans-unit id="geocoding.form.geosearch.label.find" xml:space="preserve">
+				<source>Find</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

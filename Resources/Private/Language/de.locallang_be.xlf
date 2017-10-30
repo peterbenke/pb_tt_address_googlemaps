@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-09-20T11:48:25Z" product-name="addresslist">
+		<header/>
+		<body>
+
+			<trans-unit id="addresslist.pluginName" xml:space="preserve">
+				<target>Address Liste (Google Maps)</target>
+			</trans-unit>
+			<trans-unit id="addresslist.pluginDescription" xml:space="preserve">
+				<target>Erweitert die Extension tt_address mit einer Google Map im Frontend.</target>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.sheetTitle" xml:space="preserve">
+				<target>Address Liste</target>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.layout.label" xml:space="preserve">
+				<target>Layout</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.layout.oneColWithImage" xml:space="preserve">
+				<target>Eine Spalte mit Bild</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.layout.twoCols" xml:space="preserve">
+				<target>Zwei Spalten</target>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.microData.label" xml:space="preserve">
+				<target>Ausgabe Microdata</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.default" xml:space="preserve">
+				<target>Keine Ausgabe</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.person" xml:space="preserve">
+				<target>Ausgabe als "Person"</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.microData.localBusiness" xml:space="preserve">
+				<target>Ausgabe als "LocalBusiness"</target>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.order.label" xml:space="preserve">
+				<target>Sortieren nach</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.order.name" xml:space="preserve">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="flexforms.addresslist.order.country" xml:space="preserve">
+				<target>Land, Name</target>
+			</trans-unit>
+
+
+			<trans-unit id="flexforms.addresslist.displayGoogleMap.label" xml:space="preserve">
+				<target>Google Maps anzeigen?</target>
+			</trans-unit>
+
+			<trans-unit id="flexforms.addresslist.categories.label" xml:space="preserve">
+				<target>Kategorien</target>
+			</trans-unit>
+
+
+			<trans-unit id="geocoding.error" xml:space="preserve">
+				<target>Fehler</target>
+			</trans-unit>
+			<trans-unit id="geocoding.error.referenceToParentWindow" xml:space="preserve">
+				<target>Die Referenz zum Elternfenster wurde nicht gefunden</target>
+			</trans-unit>
+			<trans-unit id="geocoding.error.geocodingNotSuccessful.part1" xml:space="preserve">
+				<target>Google Geocoding ist aus folgendem Grund fehlgeschlagen:</target>
+			</trans-unit>
+			<trans-unit id="geocoding.error.geocodingNotSuccessful.part2" xml:space="preserve">
+				<target>(Möglicherweise ist die Adresse nicht vollständig eingegeben? => Adresse, Stadt und Land)</target>
+			</trans-unit>
+
+
+			<trans-unit id="geocoding.page.title" xml:space="preserve">
+				<target>Google Geocoding</target>
+			</trans-unit>
+			<trans-unit id="geocoding.page.headline" xml:space="preserve">
+				<target>Google Geocoding</target>
+			</trans-unit>
+
+			<trans-unit id="geocoding.form.transferGeoData.label.latitude" xml:space="preserve">
+				<target>Latitude</target>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.longitude" xml:space="preserve">
+				<target>Longitude</target>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.submit" xml:space="preserve">
+				<target>Speichern</target>
+			</trans-unit>
+			<trans-unit id="geocoding.form.transferGeoData.label.cancel" xml:space="preserve">
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="geocoding.form.geosearch.label.searchFor" xml:space="preserve">
+				<target>Suchen nach</target>
+			</trans-unit>
+			<trans-unit id="geocoding.form.geosearch.label.find" xml:space="preserve">
+				<target>Suchen</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,2 @@
+# cat=basic; type=text; label=Google API key
+googleApiKey =

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-09-20T08:33:46Z" product-name="pb_tt_address_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="tx_pbttaddressgooglemaps_domain_model_address">
+				<target>Addresse</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps_domain_model_address.name">
+				<target>Name</target>
+			</trans-unit>
+
+			<trans-unit id="tx_pbttaddressgooglemaps.view.pageBrowser.previous">
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.pageBrowser.next">
+				<target>Weiter</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.filter.countrySelector.defaultOption">
+				<target>Land auswählen</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.filter.submit">
+				<target>Los »</target>
+			</trans-unit>
+
+
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.address">
+				<target>Addresse</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.contactdata">
+				<target>Kontaktdaten</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.company">
+				<target>Firma</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.position">
+				<target>Position</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.gender_m">
+				<target>Herr</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.gender_f">
+				<target>Frau</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.phone">
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.mobile">
+				<target>Mobil</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.fax">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.email">
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.www">
+				<target>Website</target>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps.view.label.approach">
+				<target>Anfahrt</target>
+			</trans-unit>
+
+			<trans-unit id="tt_address.geocoder.title">
+				<target>Google Geocoder (Zuerst die Adressdaten eingeben)</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

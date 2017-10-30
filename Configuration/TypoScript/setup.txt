@@ -1,0 +1,33 @@
+plugin.tx_pbttaddressgooglemaps_addresslist {
+
+	view {
+		templateRootPaths {
+			0 = EXT:pb_tt_address_googlemaps/Resources/Private/Templates/
+			1 = {$plugin.tx_pbttaddressgooglemaps_addresslist.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:pb_tt_address_googlemaps/Resources/Private/Partials/
+			1 = {$plugin.tx_pbttaddressgooglemaps_addresslist.view.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:pb_tt_address_googlemaps/Resources/Private/Layouts/
+			1 = {$plugin.tx_pbttaddressgooglemaps_addresslist.view.layoutRootPath}
+		}
+	}
+	persistence {
+		# Disabled, we use the "Record Storage Page" inside the plugin
+		# storagePid = {$plugin.tx_pbttaddressgooglemaps_addresslist.persistence.storagePid}
+	}
+	settings{
+		# Google ApiKey has to be defined in extension configuration
+		address{
+			viewOptions{
+				image{
+					width = {$plugin.tx_pbttaddressgooglemaps_addresslist.settings.address.viewOptions.image.width}
+				}
+				wrapHeadlines = {$plugin.tx_pbttaddressgooglemaps_addresslist.settings.address.viewOptions.wrapHeadlines}
+			}
+		}
+	}
+
+}

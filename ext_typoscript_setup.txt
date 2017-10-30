@@ -1,0 +1,9 @@
+# Table mapping
+# ==========================================================================================================================================
+config.tx_extbase.persistence.classes{
+	PeterBenke\PbTtAddressGooglemaps\Domain\Model\Address {
+		mapping {
+			tableName = tt_address
+		}
+	}
+}

@@ -1,0 +1,99 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.sheetTitle</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.displayGoogleMap>
+						<TCEforms>
+							<label>LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.displayGoogleMap.label</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.displayGoogleMap>
+					<settings.order>
+						<TCEforms>
+							<label>LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.order.label</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+								<autoSizeMax>0</autoSizeMax>
+								<multiple>0</multiple>
+								<default>name</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.order.name</numIndex>
+										<numIndex index="1">name</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.order.country</numIndex>
+										<numIndex index="1">country</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.order>
+					<settings.microDataSchemaType>
+						<TCEforms>
+							<label>LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.microData.label</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+								<autoSizeMax>0</autoSizeMax>
+								<multiple>0</multiple>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.microData.default</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.microData.person</numIndex>
+										<numIndex index="1">Person</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.microData.localBusiness</numIndex>
+										<numIndex index="1">LocalBusiness</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.microDataSchemaType>
+					<settings.categories>
+						<TCEforms>
+							<label>LLL:EXT:pb_tt_address_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms.addresslist.categories.label</label>
+							<config>
+								<type>select</type>
+								<autoSizeMax>50</autoSizeMax>
+								<foreign_table>sys_category</foreign_table>
+								<!--
+								<foreign_table_where> AND sys_category.pid = ###PAGE_TSCONFIG_ID### AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC</foreign_table_where>
+								-->
+								<foreign_table_where> AND 1=1 ORDER BY sys_category.title ASC</foreign_table_where>
+								<maxitems>9999</maxitems>
+								<renderMode>tree</renderMode>
+								<size>10</size>
+								<treeConfig>
+									<appearance>
+										<expandAll>1</expandAll>
+										<showHeader>1</showHeader>
+									</appearance>
+									<parentField>parent</parentField>
+								</treeConfig>
+							</config>
+						</TCEforms>
+					</settings.categories>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

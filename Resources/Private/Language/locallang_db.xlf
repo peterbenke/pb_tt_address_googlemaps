@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-20T08:33:46Z" product-name="pb_tt_address_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="tx_pbttaddressgooglemaps_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_pbttaddressgooglemaps_domain_model_address.name">
+				<source>Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
