@@ -3,7 +3,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Address List with Google Maps (extends tt_address)',
 	'description' => 'Extends the extension tt_address with frontend view in Google maps.',
-	'version' => '1.1.0',
+	'version' => '1.2.0',
 	'category' => 'plugin',
 	'author' => 'Peter Benke',
 	'author_email' => 'info@typomotor.de',

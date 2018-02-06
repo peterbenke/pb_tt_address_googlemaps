@@ -61,3 +61,18 @@ function initMap() {
 	map.fitBounds(bounds);
 
 }
+
+/**
+ *
+ * @param map
+ */
+/*
+function updateMapTimer(map) {
+	clearInterval(refreshIntervalId);
+	var center = map.getCenter() ;
+	google.maps.event.trigger(map, 'resize');
+	map.setCenter(center) ;
+}
+
+refreshIntervalId = setInterval(function () { updateMapTimer(map) }, 300);
+*/

@@ -51,7 +51,7 @@ class AddressController extends \PeterBenke\PbTtAddressGooglemaps\Controller\Bas
 		);
 
 		// Add javascript
-		$this->addJavascript();
+		// $this->addJavascript();
 
 		// => View
 		$this->view->assign('addresses', $addresses);

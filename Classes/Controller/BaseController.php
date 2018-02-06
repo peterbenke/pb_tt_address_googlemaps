@@ -45,6 +45,28 @@ class BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController{
 	 */
 	const PATH_TO_JS = 'typo3conf/ext/pb_tt_address_googlemaps/Resources/Public/JavaScript/';
 
+	/**
+	 * Extbase standard function
+	 * @author Peter Benke <info@typomotor.de>
+	 * @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view The view to be initialized
+	 * @return void
+	 */
+	public function initializeView(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view){
+
+		$googleApiKey = \PeterBenke\PbTtAddressGooglemaps\Utility\ExtensionConfigurationUtility::getGoogleApiKey();
+		$this->view->assign('googleApiKey', $googleApiKey);
+		// If google maps should be used and no key is defined
+		if(empty($googleApiKey) && $this->settings['displayGoogleMap']){
+			$this->view->assign('NoGoogleApiKeyDefined', true);
+		}
+
+	}
+
+	/**
+	 * Get protocol and host
+	 * @author Peter Benke <info@typomotor.de>
+	 * @return string
+	 */
 	protected function getProtocolAndHost(){
 
 		$protocol = 'http';
@@ -55,11 +77,17 @@ class BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController{
 
 	}
 
+
+
+	// => Went to Resources/Private/Partials/Address/GoogleMaps.html
+	// Because: $pageRenderer->addFooterData only works properly on cached plugins, but here we need an uncached plugin
+
 	/**
 	 * Add js-files into footer
 	 * @author Peter Benke <info@typomotor.de>
 	 * @return void
 	 */
+	/*
 	protected function addJavascript(){
 
 		// Return, if google map should not be shown
@@ -74,14 +102,12 @@ class BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController{
 			return;
 		}
 
-		/**
-		 * @var $pageRenderer \TYPO3\CMS\Core\Page\PageRenderer
-		 */
 		$pageRenderer = $this->objectManager->get('TYPO3\\CMS\\Core\\Page\\PageRenderer');
 
 		$pageRenderer->addHeaderData('<script async defer src="https://maps.googleapis.com/maps/api/js?key=' . $googleApiKey . '&callback=initMap"></script>');
 		$pageRenderer->addJsFooterFile('typo3conf/ext/pb_tt_address_googlemaps/Resources/Public/JavaScript/googleMaps.js');
 
 	}
+	*/
 
 }
