@@ -7,5 +7,5 @@ conf.py:
   copyright: 2018
   project: Address List with Google Maps
   version: 1.2
-  release: 1.2.0
+  release: 1.2.1
 ...
